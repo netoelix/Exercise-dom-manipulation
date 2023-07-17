@@ -1,12 +1,18 @@
 // Seu código aqui inicio
-document.getElementsByTagName('p')[1].textContent = 'Em dois anos eu me vejo trabalhando como pessoa desenvolvedroa full stack';
-document.getElementsByClassName('main-content')[0].style.backgroundColor = 'rgb(76, 164, 109)';
-document.getElementsByClassName('center-content')[0].style.backgroundColor = 'white';
-document.querySelector('h1').textContent = 'Desafio - JavaScript';
+const pElements = document.querySelectorAll('.center-content p');
+const mainContent = document.querySelector('.main-content');
+const centerContent = document.querySelector('.center-content');
+const h1Element = document.querySelector('h1');
 
-const upperCase = document.getElementsByTagName('p')[0].innerHTML;
-const newUpperCase = upperCase.toUpperCase();
-document.getElementsByTagName('p')[0].textContent = newUpperCase;
+pElements[1].textContent = 'Em dois anos eu me vejo trabalhando como pessoa desenvolvedora full stack';
+
+mainContent.style.backgroundColor = 'rgb(76, 164, 109)';
+centerContent.style.backgroundColor = 'white';
+
+h1Element.textContent = 'Desafio - JavaScript';
+
+const firstParagraph = pElements[0];
+firstParagraph.textContent = firstParagraph.textContent.toUpperCase();
 
 function exibirConteudoTagsP() {
   const tagsP = document.querySelectorAll('.center-content p');

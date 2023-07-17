@@ -4,6 +4,20 @@ document.getElementsByClassName('main-content')[0].style.backgroundColor = 'rgb(
 document.getElementsByClassName('center-content')[0].style.backgroundColor = 'white';
 document.querySelector('h1').textContent = 'Desafio - JavaScript';
 
-let upperCase = document.getElementsByTagName('p')[0].innerHTML;
-let newUpperCase = upperCase.toUpperCase();
+const upperCase = document.getElementsByTagName('p')[0].innerHTML;
+const newUpperCase = upperCase.toUpperCase();
 document.getElementsByTagName('p')[0].textContent = newUpperCase;
+
+function exibirConteudoTagsP() {
+  const tagsP = document.querySelectorAll('.center-content p');
+  let conteudo = '';
+
+  for (let index = 0; index < tagsP.length; index += 1) {
+    conteudo += `${tagsP[index].textContent} `;
+  }
+
+  return conteudo;
+}
+
+const conteudoTagsP = exibirConteudoTagsP();
+document.querySelector('footer p').textContent = conteudoTagsP;
